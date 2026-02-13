@@ -1,0 +1,64 @@
+/* Основной стиль */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Заголовок и текст */
+h1 {
+  color: #ff3366;
+  font-size: 8vw; /* адаптивно для телефона */
+  margin: 0 0 10px 0;
+}
+
+p {
+  font-size: 5vw;
+  margin: 10px 0 20px 0;
+}
+
+/* Кнопка-сердечко */
+#heart {
+  font-size: 10vw;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#heart:hover {
+  transform: scale(1.2);
+}
+
+/* Падающие сердечки */
+.heart-fall {
+  position: absolute;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% { top: -50px; opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+/* Медиа-запрос для очень маленьких экранов */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+}
